@@ -2,7 +2,7 @@ FROM oscargl/hadoop:2.7.1
 MAINTAINER oscargl
 
 #support for Hadoop 2.6.0
-RUN curl -s  http://www.apache.org/dyn/closer.lua/spark/spark-1.5.0/spark-1.5.0-bin-hadoop2.6.tgz | tar -xz -C /usr/local/
+RUN curl -s  http://apache.rediris.es/spark/spark-1.5.0/spark-1.5.0-bin-hadoop2.6.tgz | tar -xz -C /usr/local/
 RUN cd /usr/local && ln -s spark-1.5.0-bin-hadoop2.6 spark
 ENV SPARK_HOME /usr/local/spark
 RUN mkdir $SPARK_HOME/yarn-remote-client
